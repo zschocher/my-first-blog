@@ -3,15 +3,19 @@
         <title>Startseite Zschocher.Info</title>
         </head>
     <body>
-        <h1><strong>ZSCHOCHER CALLING</strong></h1>
-        <h2>Infos zu deinem Stadtteil</h2>
-        <br>
+        <h1><strong>ZSCHOCHER.INFO: Infos zu deinem Stadtteil</strong></h1>
         <p>Informier dich über <strong>Veranstaltungen</strong> und <strong>Neuigkeiten</strong> in deinem Stadtteil Klein- oder Großzschocher</p>
 <div>
     <h3>Veranstaltungskalender</h3>
-    <p>12.11.2019 Offenes Plenum @ P9</p>
+
 </div>
-        </body>
+
+{% for post in posts %}
+<div>
+    <h3><a href=" ">{{ post.title }}</a></h3>
+    <p> {{ post.text|linebreaksbr }}</p>
+</div>
+{% endfor %}
 
     </body>
 </html>
